@@ -27,6 +27,7 @@ public class JettyServer {
         server.setHandler(servletHandler);
 
         server.start();
+        server.join();
     }
 
     public static void stop() throws Exception {
