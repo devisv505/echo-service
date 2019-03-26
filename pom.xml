@@ -45,7 +45,7 @@
                 <configuration>
                     <appName>echo-service-505</appName>
                     <processTypes>
-                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* com.devisv.echo.service.Bootstrap</web>
+                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* Bootstrap</web>
                     </processTypes>
                 </configuration>
             </plugin>
