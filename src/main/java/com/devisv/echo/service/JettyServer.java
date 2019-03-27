@@ -9,8 +9,6 @@ import static com.devisv.echo.service.SimpleServlet.PATCH;
 
 public class JettyServer {
 
-    private static final int PORT = 9000;
-
     private static Server server = new Server();
 
     private JettyServer() {
@@ -18,7 +16,7 @@ public class JettyServer {
 
     public static void start() throws Exception {
         ServerConnector serverConnector = new ServerConnector(server);
-        serverConnector.setPort(PORT);
+        serverConnector.setPort(Integer.valueOf(System.getenv("PORT")));
 
         ServletHandler servletHandler = new ServletHandler();
         servletHandler.addServletWithMapping(SimpleServlet.class, PATCH);
